@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuItem from "../menu-item/menu-item.component";
 import "./directory.styles.scss";
 
 const Directory = () => {
-  const [sections, setSection] = useState([
+  const menuItemsList = [
     {
       title: "hats",
       imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
@@ -36,7 +36,13 @@ const Directory = () => {
       id: 5,
       linkUrl: "shop/mens",
     },
-  ]);
+  ];
+
+  const [sections, setSection] = useState([]);
+
+  useEffect(() => {
+    setSection(menuItemsList);
+  }, []);
 
   return (
     <div className="directory-menu">
