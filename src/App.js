@@ -11,7 +11,6 @@ import { setCurrentUser } from "./redux/user/user.actions";
 
 const App = ({ setCurrentUser, currentUser }) => {
   let unsubscribeFromAuth = null;
-  console.log(currentUser);
 
   useEffect(() => {
     unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
