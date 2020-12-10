@@ -11,6 +11,21 @@
   right: 40px;
   z-index: 5;
 
+  .cart-hide-icon {
+    font-weight: bold;
+    font-size: 30px;
+    align-self: flex-end;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
   .cart-items {
     height: 240px;
     display: flex;
